@@ -1,0 +1,20 @@
+/* navbar */
+header nav {
+  display: flex;
+  gap: 1.25em;
+  justify-content: end;
+  margin: 0 auto;
+  padding: 16px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.6);
+}
+header nav h1 {
+  margin-right: auto;
+}
+header nav a {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a:active {
+  background: #bc4123;
+}

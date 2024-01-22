@@ -1,0 +1,28 @@
+
+.notFound {
+    position: relative;
+    text-align: center;
+    
+}
+img {
+   width: 100%;
+   height: 50vw;
+}
+.container {
+    font-size: 40px;
+    font-weight: 400;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 16px;
+    top: 10%;
+    left: 50%;
+    color: red;
+    transform: translate(-50%, -50%);
+}
+button {
+    width: 100px;
+}
