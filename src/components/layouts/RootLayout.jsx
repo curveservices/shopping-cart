@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Breadcrumbs from "../components/Breadcrumbs";
-import style from "./RootLayout.module.css";
+import Breadcrumbs from "../pages/Breadcrumbs";
+import style from "../styles/RootLayout.module.css";
 
 const RootLayout = () => {
   return (

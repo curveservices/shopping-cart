@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import style from './BreadCrumbs.module.css'
+import style from '../styles/BreadCrumbs.module.css'
 
 const Breadcrumbs = () => {
     const location = useLocation();
@@ -10,7 +10,7 @@ const Breadcrumbs = () => {
         .map(crumb => {
             currentLink += `/${crumb}`
             return (
-                <div className="crumb" key={crumb}>
+                <div className={style.crumb} key={crumb}>
                     <Link to={currentLink}>{crumb}</Link>
                 </div>
             );
