@@ -16,7 +16,7 @@ const Breadcrumbs = () => {
             );
         })
     return (
-        <div className={style.Breadcrumbs}>
+        <div className={style.breadcrumbs}>
             {crumbs}
         </div>
     );
