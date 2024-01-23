@@ -15,6 +15,7 @@ import Shop from "./components/pages/Shop";
 import NotFound from "./components/pages/NotFound";
 import Menswear from "./components/pages/Menswear";
 import Womenswear from "./components/pages/Womenswear";
+import Jewelery from "./components/pages/Jewelery";
 
 
 const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
         <Route index element={<Shop />} />
         <Route path="menswear" element={<Menswear />} />
         <Route path="womenswear" element={<Womenswear />} />
+        <Route path="jewelery" element={<Jewelery />} />
         <Route path="electronics" element={<Electronics />} />
       </Route>
 
