@@ -17,7 +17,6 @@ import Menswear from "./components/pages/Menswear";
 import Womenswear from "./components/pages/Womenswear";
 import Jewelery from "./components/pages/Jewelery";
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
@@ -32,7 +31,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="*" element={<NotFound />} />
-    </Route>
+    </Route>,
   ),
 );
 

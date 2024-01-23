@@ -27,6 +27,7 @@
 9. As usual, style your application and deploy it!
 
 ## Extra
+
 -
 
 ## Languages & Tools
@@ -43,7 +44,6 @@
     <img width="100" alt="REACT" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
 <a href="https://jestjs.io/">
     <img width="100" alt="jest" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" /></a>
-
 
 **_<a href="https://twitter.com/Crypto_Rozla"> Rozla-Dev </a> 00-00-2023_**
 
