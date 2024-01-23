@@ -1,0 +1,23 @@
+.layout {
+    display: flex;
+    margin: 2em auto;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    width: 15em;
+    padding: 1.25em;
+    margin: 2em auto;
+    gap: 1.5em;
+}
+nav a {
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+nav a:focus {
+    background-color: #bc4123;
+}

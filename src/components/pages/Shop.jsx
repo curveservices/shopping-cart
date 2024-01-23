@@ -1,10 +1,11 @@
 import useAPI from "../../utils/ShopAPI";
 import MoonLoader from "react-spinners/MoonLoader";
 
+
 const Shop = () => {
     const { data, loading, error } = useAPI('https://fakestoreapi.com/products/')
     return (
-        <div className="shop-layout">
+        <main className=''>
             {<MoonLoader
             className="spinner"
             color="white"
@@ -26,7 +27,7 @@ const Shop = () => {
                 </div>
                 ))}
             </div>
-        </div>
+        </main>
     );
 }
  

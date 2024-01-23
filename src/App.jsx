@@ -13,6 +13,7 @@ import Electronics from "./components/pages/Electronics";
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
 import NotFound from "./components/pages/NotFound";
+import Menswear from "./components/pages/Menswear";
 
 
 const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
 
       <Route path="shop" element={<ShopLayout />}>
         <Route index element={<Shop />} />
+        <Route path="menswear" element={<Menswear />} />
         <Route path="electronics" element={<Electronics />} />
       </Route>
 

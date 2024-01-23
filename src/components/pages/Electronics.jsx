@@ -4,14 +4,17 @@ import MoonLoader from "react-spinners/MoonLoader";
 const Electronics = () => {
     const { data, loading, error } = useAPI('https://fakestoreapi.com/products/category/electronics')
     return (
-        <div className="shop-layout">
-            {<MoonLoader
+        <>
+        <div className="spinner">
+             {<MoonLoader
             className="spinner"
             color="white"
             loading={loading}
             size={100} 
             aria-label='Loading Spinner'
             data-testid='loader'/>}
+        </div>
+        <div className="shop-layout">
             {error && (
                 <div>{`There was a problem fetching the item data = ${error}`}</div>
             )}
@@ -27,6 +30,7 @@ const Electronics = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 }
  
