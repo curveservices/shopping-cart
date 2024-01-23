@@ -16,7 +16,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.2.0",
@@ -33,5 +34,8 @@
     "prettier": "3.2.4",
     "vite": "^5.0.8",
     "vitest": "^1.2.1"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
