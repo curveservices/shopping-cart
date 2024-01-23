@@ -16,7 +16,9 @@ const Shop = () => {
         />
       }
       {error && (
-        <div>{`There was a problem fetching the item data = ${error}`}</div>
+        <div>
+          {`There was a problem fetching the item data = ${error}`}
+          </div>
       )}
       <div className="items-container">
         {data &&
