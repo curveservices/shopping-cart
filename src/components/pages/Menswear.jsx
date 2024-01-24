@@ -21,6 +21,7 @@ const Menswear = () => {
         </div>
     )}
     <div className="items-container">
+      <h2>MEN'S APARREL</h2>
       {data &&
         data.map(({ id, category, title, image, price }) => (
           <div key={id} className="items">

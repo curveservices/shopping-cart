@@ -9,10 +9,8 @@ const NotFound = () => {
         <img src={ripped} className={style.img} />
         <div className={style.container}>
           <div className={style.top}>
-            Error 404 Page Not found
-            <button>
+            Page Not Found
               <Link to="/">Back Home</Link>
-            </button>
           </div>
         </div>
       </div>

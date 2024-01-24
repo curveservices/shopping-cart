@@ -13,6 +13,7 @@ const RootLayout = () => {
           <NavLink to="help">Help</NavLink>
           <NavLink to="basket">
             <i className="fa-solid fa-cart-shopping"></i>
+            <span className="basket-number"></span>
           </NavLink>
         </nav>
         <Breadcrumbs />
