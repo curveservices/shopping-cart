@@ -4,11 +4,11 @@ import MoonLoader from "react-spinners/MoonLoader";
 const Shop = () => {
   const { data, loading, error } = useAPI("https://fakestoreapi.com/products/");
   return (
-    <main className="">
+    <div className="content">
       {
         <MoonLoader
           className="spinner"
-          color="white"
+          color="black"
           loading={loading}
           size={100}
           aria-label="Loading Spinner"
@@ -31,7 +31,7 @@ const Shop = () => {
             </div>
           ))}
       </div>
-    </main>
+    </div>
   );
 };
 

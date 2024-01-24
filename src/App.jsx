@@ -9,6 +9,7 @@ import {
 import RootLayout from "./components/layouts/RootLayout";
 import ShopLayout from "./components/layouts/ShopLayout";
 import Electronics from "./components/pages/Electronics";
+import HelpLayout from "./components/layouts/HelpLayout";
 //Pages
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
@@ -16,6 +17,7 @@ import NotFound from "./components/pages/NotFound";
 import Menswear from "./components/pages/Menswear";
 import Womenswear from "./components/pages/Womenswear";
 import Jewelery from "./components/pages/Jewelery";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +30,10 @@ const router = createBrowserRouter(
         <Route path="womenswear" element={<Womenswear />} />
         <Route path="jewelery" element={<Jewelery />} />
         <Route path="electronics" element={<Electronics />} />
+      </Route>
+
+      <Route path="help" element={<HelpLayout />}>
+
       </Route>
 
       <Route path="*" element={<NotFound />} />

@@ -1,31 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
 
 :root {
-  font-family: "Poppins", sans-serif;
-  --primary: #242424;
+  --primary: #ffffff;
+  
 }
 
 body {
   margin: 0;
-  padding: 1em;
-  font-family: "Poppins";
+  padding: 2em;
+  font-family: 'Metrophobic', sans-serif;
   background: var(--primary);
+  letter-spacing: 0.15em;
 }
 * {
-  color: #fff;
+  color: #2f2f2f;
   margin: 0;
 }
 a {
+  text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 6px;
 }
-p {
-  margin: 20px 0;
+a:after {
+  background: none repeat 
+  scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #2f2f2f;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 button {
   border: 0;
   padding: 8px;
   border-radius: 4px;
   color: white;
-  background: var(--primary);
+  background: var(--button);
   cursor: pointer;
 }

@@ -11,7 +11,7 @@ const ShopLayout = () => {
         <NavLink to="electronics">Electronics</NavLink>
       </nav>
       <main>
-        <Outlet />
+        <Outlet styles={styles.content} />
       </main>
     </div>
   );

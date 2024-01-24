@@ -13,11 +13,4 @@ header nav h1 {
 header nav a {
   text-decoration: none;
   padding: 6px;
-  border-radius: 4px;
-}
-header nav a:active {
-  background: #bc4123;
-}
-header nav a:hover {
-  background-color: #bc4123;
 }
