@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  padding: 2em;
+  padding: 0em 1em;
   font-family: 'Metrophobic', sans-serif;
   background: var(--primary);
   letter-spacing: 0.15em;
@@ -48,6 +48,6 @@ button {
   padding: 8px;
   border-radius: 4px;
   color: white;
-  background: black;
+  background: #838383;
   cursor: pointer;
 }

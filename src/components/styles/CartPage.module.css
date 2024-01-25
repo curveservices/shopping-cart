@@ -1,0 +1,58 @@
+.cartContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    margin: 2em;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    max-width: inherit;
+    padding: 1em;
+    border: 2px dotted #2f2f2255;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+}
+p { 
+    text-align: center;
+}
+button {
+    width: 120px;
+    height: auto;
+}
+.btnContainer {
+    display: flex;
+    width: 100px;
+    padding: 0 16px;
+    gap: 8px;
+}
+.btnContainer input {
+    width: 20px;
+    height: auto;
+}
+.plus {
+    background: rgb(15, 72, 15);
+}
+.minus {
+    background: #9c3333;
+}
+.checkout {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    float: right;
+}

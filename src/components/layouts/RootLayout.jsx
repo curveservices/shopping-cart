@@ -10,7 +10,7 @@ const RootLayout = () => {
     <div className={style.header}>
       <header>
         <nav>
-          <h1>Shopping Cart</h1>
+          <h1>Urban Shopper</h1>
           <NavLink to="/">Home</NavLink>
           <NavLink to="shop">Shop</NavLink>
           <NavLink to="cart">

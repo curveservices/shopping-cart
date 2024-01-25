@@ -35,9 +35,7 @@ const router = createBrowserRouter(
           <Route path="electronics" element={<Electronics />} />
         </Route>
 
-        <Route path="cart" element={<ShopLayout />}>
-          <Route index element={<CartPage />} />
-        </Route>
+        <Route path="cart" element={<CartPage />} />
         
       
         <Route path="*" element={<NotFound />} />
