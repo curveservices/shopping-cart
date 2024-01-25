@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Breadcrumbs from "../pages/Breadcrumbs";
+import Breadcrumbs from "../common/Breadcrumbs";
 import style from "../styles/RootLayout.module.css";
 
 
