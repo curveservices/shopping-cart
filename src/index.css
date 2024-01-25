@@ -48,6 +48,6 @@ button {
   padding: 8px;
   border-radius: 4px;
   color: white;
-  background: var(--button);
+  background: black;
   cursor: pointer;
 }
