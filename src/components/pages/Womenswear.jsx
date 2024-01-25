@@ -1,5 +1,6 @@
 import useAPI from "../../utils/ShopAPI";
 import { MoonLoader } from "react-spinners";
+import Card from "../common/Card";
 
 const Womenswear = () => {
   const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/women's clothing");
@@ -23,12 +24,12 @@ const Womenswear = () => {
       <div className="items-container">
         {data &&
           data.map(({ id, category, title, image, price }) => (
-            <div key={id} className="items">
-              <h4>{title}</h4>
-              <div>{category}</div>
-              <img src={image} />
-              <p>£ {price}</p>
-            </div>
+            <Card 
+            key={id} 
+            category={category} 
+            title={title} 
+            image={image} 
+            price={price} />
           ))}
       </div>
     </div>

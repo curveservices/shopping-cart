@@ -19,25 +19,26 @@ import Jewelery from "./components/pages/Jewelery";
 import Cart from "./components/pages/Cart";
 
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route index element={<Home />} />
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
 
-      <Route path="shop" element={<ShopLayout />}>
-        <Route index element={<Shop />} />
-        <Route path="menswear" element={<Menswear />} />
-        <Route path="womenswear" element={<Womenswear />} />
-        <Route path="jewelery" element={<Jewelery />} />
-        <Route path="electronics" element={<Electronics />} />
+        <Route path="shop" element={<ShopLayout />}>
+          <Route index element={<Shop />} />
+          <Route path="menswear" element={<Menswear />} />
+          <Route path="womenswear" element={<Womenswear />} />
+          <Route path="jewelery" element={<Jewelery />} />
+          <Route path="electronics" element={<Electronics />} />
+        </Route>
+
+        <Route path="cart" element={<ShopLayout />}>
+          <Route index element={<Cart />} />
+        </Route>
+
+        <Route path="*" element={<NotFound />} />
       </Route>
-
-      <Route path="cart" element={<ShopLayout />}>
-        {/* <Route index element={<Cart />} /> */}
-      </Route>
-
-      <Route path="*" element={<NotFound />} />
-    </Route>,
   ),
 );
 

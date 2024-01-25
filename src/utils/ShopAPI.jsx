@@ -18,6 +18,7 @@ export default function useAPI(url) {
       .then((response) => response.json())
       .then((responseData) => {
         if (!signal.aborted) {
+          console.log(responseData)
           setData(responseData);
           setLoaded(true);
           setLoading(false);
