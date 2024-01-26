@@ -1,11 +1,11 @@
-import useAPI from "../../utils/ShopAPI";
+import useAPI from "../../../utils/ShopAPI";
 import { MoonLoader } from "react-spinners";
-import Card from "../common/Card";
+import Card from "../../common/Card";
 
-const Menswear = () => {
-  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/men's clothing");
+const Jewelery = () => {
+  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/jewelery");
   return (
-    <div>
+    <div className="content">
     {
       <MoonLoader
         className="spinner"
@@ -22,7 +22,6 @@ const Menswear = () => {
         </div>
     )}
     <div className="items-container">
-      <h2>MEN'S APARREL</h2>
       {data &&
         data.map(({ id, category, title, image, price }) => (
           <Card 
@@ -37,4 +36,4 @@ const Menswear = () => {
   );
 };
 
-export default Menswear;
+export default Jewelery;

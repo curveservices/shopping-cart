@@ -11,15 +11,3 @@
   gap: 1.5em;
 }
 
-.content {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0 2em;
-}
-.product {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  place-items: center;
-  width: 100%;
-  height: auto;
-}

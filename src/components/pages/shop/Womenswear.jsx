@@ -1,6 +1,6 @@
-import useAPI from "../../utils/ShopAPI";
+import useAPI from "../../../utils/ShopAPI";
 import { MoonLoader } from "react-spinners";
-import Card from "../common/Card";
+import Card from "../../common/Card";
 
 const Womenswear = () => {
   const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/women's clothing");

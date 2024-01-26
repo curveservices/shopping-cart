@@ -1,11 +1,14 @@
-import useAPI from "../../utils/ShopAPI";
+import useAPI from "../../../utils/ShopAPI";
 import { MoonLoader } from "react-spinners";
-import Card from "../common/Card";
+import Card from "../../common/Card";
 import { useState } from "react";
+import styles from '../../styles/AllShopPage.module.css'
 
 const Shop = () => {
-  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/");
+ 
+  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/",);
   const [cart, setCart] = useState([]);
+  
 
   const addToCart = (item) => {
     console.log('add to cart', item)
@@ -13,10 +16,14 @@ const Shop = () => {
   };
 
   return (
-    <div className="content">
+    <>
+    <div className={styles.header}>
+      <h2>All Shop Items</h2>
+    </div>
+   
       {
         <MoonLoader
-          className="spinner"
+          className={styles.spinner}
           color="black"
           loading={loading}
           size={100}
@@ -27,23 +34,21 @@ const Shop = () => {
       {error && (
         <div>
           {`There was a problem fetching the item data = ${error}`}
-          </div>
+        </div>
       )}
-      <div className="items-container">
+       <div className={styles.cardContainer}>
         {data &&
-          data.map(({ id, category, title, image, price, description }) => (
+          data.map(({ id, title, image, price }) => (
             <Card 
             key={id} 
-            category={category} 
             title={title} 
             image={image} 
             price={price}
-            description={description}
             addToCart={addToCart}
             />
           ))}
       </div>
-    </div>
+    </>
   );
 };
 

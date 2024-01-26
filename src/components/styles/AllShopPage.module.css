@@ -1,25 +1,28 @@
-.cartContainer {
+.cardContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 2em;
-    grid-column-gap: 2em;
-    margin: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+    grid-gap: 2em;
+    margin: 1em;
 }
 
 .card {
     display: flex;
     flex-flow: column;
-    max-width: inherit;
     padding: 1em;
     border: 2px dotted #2f2f2255;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    text-align: center;
     gap: 1em;
 }
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin: 1em;
     gap: 5em;
 }
 
@@ -55,4 +58,10 @@ button {
     flex-direction: column;
     font-weight: 900;
     float: right;
+}
+
+.spinner {
+    position: fixed;
+    top: 10%;
+    left: 50%;
 }

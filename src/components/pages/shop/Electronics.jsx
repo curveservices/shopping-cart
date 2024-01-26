@@ -1,9 +1,9 @@
-import useAPI from "../../utils/ShopAPI";
-import { MoonLoader } from "react-spinners";
-import Card from "../common/Card";
+import useAPI from "../../../utils/ShopAPI";
+import MoonLoader from "react-spinners/MoonLoader";
+import Card from "../../common/Card";
 
-const Jewelery = () => {
-  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/jewelery");
+const Electronics = () => {
+  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/electronics");
   return (
     <div className="content">
     {
@@ -24,7 +24,7 @@ const Jewelery = () => {
     <div className="items-container">
       {data &&
         data.map(({ id, category, title, image, price }) => (
-          <Card 
+          <Card
           key={id} 
           category={category} 
           title={title} 
@@ -36,4 +36,4 @@ const Jewelery = () => {
   );
 };
 
-export default Jewelery;
+export default Electronics;
