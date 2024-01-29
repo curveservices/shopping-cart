@@ -12,14 +12,15 @@ const PageLayout = ({ data, loading, error }) => {
     return (
     <>
       {loading &&
+      <div className={styles.spinner}>
         <MoonLoader
-          className={styles.spinner}
           color="black"
           loading={loading}
           size={100}
           aria-label="Loading Spinner"
           data-testid="loader"
         />
+        </div>
       }
       {error && (
         <div>

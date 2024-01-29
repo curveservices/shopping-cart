@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 //Layouts
-import RootLayout from "./components/layouts/RootLayout";
+import RootLayout from "./components/common/RootLayout";
 import ShopLayout from "./components/common/ShopLayout";
 
 //Pages
@@ -29,7 +29,8 @@ const router = createBrowserRouter(
       
         <Route path="shop" element={<ShopLayout />}>
           <Route index element={<Shop />} />
-          <Route path=":id" 
+          <Route
+          path=":id" 
           element={<ItemDetails/>}
           />
 

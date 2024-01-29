@@ -18,7 +18,8 @@ const Shop = () => {
   return (
     <>
     {loading &&
-      <MoonLoader
+      <div className={styles.spinner}>
+           <MoonLoader
         className={styles.spinner}
         color="black"
         loading={loading}
@@ -26,6 +27,7 @@ const Shop = () => {
         aria-label="Loading Spinner"
         data-testid="loader"
       />
+      </div>
     }
     {error && (
       <div>
@@ -34,7 +36,7 @@ const Shop = () => {
     )}
      <div className={styles.cardContainer}>
       {data &&
-        data.map(({ id, title, image, price, category }) => (
+        data.map(({ id, title, image, price }) => (
           <div key={id}>
             <h2 className={styles.header}>All Shop Items</h2>
             <Link to={`/shop/${id}`} >

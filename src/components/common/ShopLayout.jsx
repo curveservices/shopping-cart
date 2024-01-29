@@ -5,13 +5,13 @@ const ShopLayout = () => {
   return (
     <div className={styles.layout}>
       <nav className={styles.sidebar}>
-        <NavLink to="menswear">Men's wear</NavLink>
         <NavLink to="womenswear">Women's wear</NavLink>
+        <NavLink to="menswear">Men's wear</NavLink>
         <NavLink to="jewelery">Jewelery</NavLink>
         <NavLink to="electronics">Electronics</NavLink>
       </nav>
       <main>
-        <Outlet styles={styles.content} />
+        <Outlet />
       </main>
     </div>
   );

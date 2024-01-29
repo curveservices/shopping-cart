@@ -1,20 +1,22 @@
 .cardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
-    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) ;
+    grid-gap: 1em;
     margin: 1em;
 }
 
 .card {
     display: flex;
     flex-flow: column;
-    padding: 1em;
+    padding: 2em;
     border: 2px dotted #2f2f2255;
     align-items: center;
     justify-content:space-evenly;
     text-align: center;
-    gap: 1em;
+    gap: 0.5em;
+    margin-top: 1em;
     height: 400px;
+    
 }
 .header {
     display: flex;
@@ -31,8 +33,13 @@
     width: 150px;
     height: 150px;
 }
+h2 {
+    text-transform: uppercase;
+}
+
 p { 
     text-align: center;
+    font-weight: bold;
 }
 button {
     width: 120px;
@@ -63,6 +70,13 @@ button {
 
 .spinner {
     position: fixed;
-    top: 10%;
+    top: 40%;
     left: 50%;
 }
+.itemdetails {
+    align-self: center;
+    margin: 1em;
+    width: 700px;
+    max-height: 1000px;
+}
+

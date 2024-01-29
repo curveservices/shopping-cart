@@ -11,7 +11,7 @@ const RootLayout = () => {
     <div className={style.header}>
       <header>
         <nav>
-          <h1>Urban Shopper</h1>
+          <h1>Fake Shopper</h1>
           <NavLink to="/">Home</NavLink>
           <NavLink to="shop">Shop</NavLink>
           <NavLink to="cart">
