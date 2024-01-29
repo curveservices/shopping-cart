@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import styles from '../styles/AllShopPage.module.css'
 
 const Card = ({ id, title, image, price, description }) => {
   const { addToCart } = useCart();
+  const navigate = useNavigate()
 
   return (
     <>
@@ -12,8 +14,9 @@ const Card = ({ id, title, image, price, description }) => {
       <p>£{price}</p>
       <p>{description}</p>
       <div className={styles.btnContainer}>
-        <button onClick={() => 
-        { addToCart({ id, title, image, price, description })}}
+        <button onClick={() => { 
+          addToCart({ id, title, image, price, description }); 
+          navigate('/cart')}}
         >
           Add To Cart
         </button>

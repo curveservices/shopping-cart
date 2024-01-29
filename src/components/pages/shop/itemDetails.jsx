@@ -12,7 +12,7 @@ export default function ItemsDetails({title}) {
   const addToCart = (item) => {
     console.log('add to cart', item)
     setCart((prevCart) => [...prevCart, item])
-    navigate('cart')
+    
   };
 
     return (
@@ -44,7 +44,6 @@ export default function ItemsDetails({title}) {
             description={data.description} 
             price={data.price}
             addToCart={addToCart}
-            navigate={navigate}
             />
         }
       </div>

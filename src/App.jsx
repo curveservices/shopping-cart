@@ -7,7 +7,7 @@ import {
 
 //Layouts
 import RootLayout from "./components/layouts/RootLayout";
-import ShopLayout from "./components/layouts/ShopLayout";
+import ShopLayout from "./components/common/ShopLayout";
 
 //Pages
 import Home from "./components/pages/Home";
