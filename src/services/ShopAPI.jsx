@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 
+export const productItemLoader = () => {
+  const  { data,loading, error } = useAPI("https://fakestoreapi.com/products", {mode:'cors'})
+  return (data, loading, error)
+}
+
 export default function useAPI(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

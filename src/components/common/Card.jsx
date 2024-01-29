@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { useCart } from "../../utils/CartContext";
+import { useCart } from "../context/CartContext";
 import styles from '../styles/AllShopPage.module.css'
 
 const Card = ({ id, title, image, price, description }) => {
@@ -7,19 +6,18 @@ const Card = ({ id, title, image, price, description }) => {
 
   return (
     <>
-    <div key={id} className={styles.card}>
-      <Link to={id}>
+    <div className={styles.card}>
       <img src={image} alt={title} className={styles.img}/>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <p>£{price}</p>
       <p>{description}</p>
       <div className={styles.btnContainer}>
-        <button onClick={() => addToCart({ id, title, image, price, description })}
+        <button onClick={() => 
+        { addToCart({ id, title, image, price, description })}}
         >
           Add To Cart
         </button>
       </div>
-      </Link>
     </div>
     </>
   );

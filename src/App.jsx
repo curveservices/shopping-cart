@@ -24,19 +24,21 @@ import ItemDetails from "./components/pages/shop/itemDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
+      <Route element={<RootLayout />}>
+        <Route path="/" element={<Home />} />
       
         <Route path="shop" element={<ShopLayout />}>
           <Route index element={<Shop />} />
-          <Route path="shop/:id"element={<ItemDetails/>}/>
+          <Route path=":id" 
+          element={<ItemDetails/>}
+          />
 
           <Route path="menswear" element={<Menswear />} />
           <Route path="womenswear" element={<Womenswear />} />
           <Route path="jewelery" element={<Jewelery />} />
           <Route path="electronics" element={<Electronics />} />
         </Route>
-        <Route element={<ShopLayout />}>
+        <Route path="/" element={<ShopLayout />}>
           <Route path="cart" element={<CartPage />} />
         </Route>
        

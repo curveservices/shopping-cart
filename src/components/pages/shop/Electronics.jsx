@@ -1,4 +1,4 @@
-import useAPI from "../../../utils/ShopAPI";
+import useAPI from "../../../services/ShopAPI";
 import MoonLoader from "react-spinners/MoonLoader";
 import Card from "../../common/Card";
 

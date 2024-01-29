@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "../common/Breadcrumbs";
+import { FaShoppingCart } from "react-icons/fa";
 import style from "../styles/RootLayout.module.css";
 
 
@@ -14,7 +15,7 @@ const RootLayout = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="shop">Shop</NavLink>
           <NavLink to="cart">
-            <i className="fa-solid fa-cart-shopping"></i>
+            <FaShoppingCart />
             ({ cartItemsCount })
           </NavLink>
         </nav>

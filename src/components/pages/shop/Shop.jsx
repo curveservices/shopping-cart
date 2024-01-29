@@ -1,12 +1,13 @@
-import useAPI from "../../../utils/ShopAPI";
+import useAPI from "../../../services/ShopAPI";
 import { MoonLoader } from "react-spinners";
 import Card from "../../common/Card";
 import { useState } from "react";
 import styles from '../../styles/AllShopPage.module.css'
+import { Link } from "react-router-dom";
 
 const Shop = () => {
  
-  const { data, loading, error } = useAPI("https://fakestoreapi.com/products/",);
+  const {data, loading, error } = useAPI("https://fakestoreapi.com/products/");
   const [cart, setCart] = useState([]);
   
 
@@ -21,7 +22,7 @@ const Shop = () => {
       <h2>All Shop Items</h2>
     </div>
    
-      {
+      {loading &&
         <MoonLoader
           className={styles.spinner}
           color="black"
@@ -36,16 +37,17 @@ const Shop = () => {
           {`There was a problem fetching the item data = ${error}`}
         </div>
       )}
-       <div className={styles.cardContainer}>
+       <div className={styles.cardContainer} key={data} >
         {data &&
           data.map(({ id, title, image, price }) => (
+            <Link to={`/shop/${id}`} key={id}>
             <Card 
-            key={id} 
             title={title} 
             image={image} 
             price={price}
-            addToCart={addToCart}
+            onClick={addToCart}
             />
+            </Link>
           ))}
       </div>
     </>
