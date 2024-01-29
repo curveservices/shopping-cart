@@ -14,6 +14,7 @@
     justify-content:space-evenly;
     text-align: center;
     gap: 1em;
+    height: 400px;
 }
 .header {
     display: flex;

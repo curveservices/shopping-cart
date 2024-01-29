@@ -1,38 +1,54 @@
 import useAPI from "../../../services/ShopAPI";
 import { MoonLoader } from "react-spinners";
 import Card from "../../common/Card";
+import styles from '../../styles/AllShopPage.module.css'
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Womenswear = () => {
   const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/women's clothing");
+  const [cart, setCart] = useState([]);
+  
+  const addToCart = (item) => {
+    console.log('add to cart', item)
+    setCart((prevCart) => [...prevCart, item])
+  };
+  
   return (
-    <div className="content">
-      {
-        <MoonLoader
-          className="spinner"
-          color="black"
-          loading={loading}
-          size={100}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
-      }
-      {error && (
-        <div>
-          {`There was a problem fetching the item data = ${error}`}
-          </div>
-      )}
-      <div className="items-container">
-        {data &&
-          data.map(({ id, category, title, image, price }) => (
+    <>
+    {loading &&
+      <MoonLoader
+        className={styles.spinner}
+        color="black"
+        loading={loading}
+        size={100}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    }
+    {error && (
+      <div>
+        {`There was a problem fetching the item data = ${error}`}
+      </div>
+    )}
+     <div className={styles.cardContainer}>
+      {data &&
+        data.map(({ id, title, image, price, category }) => (
+          <div key={id}>
+            <h2 className={styles.header}>{category}</h2>
+            <Link to={`/shop/${id}`} >
             <Card 
-            key={id} 
-            category={category} 
+            key={id}
             title={title} 
             image={image} 
-            price={price} />
-          ))}
+            price={price}
+            onClick={addToCart}
+            />
+            </Link>
+          </div>
+        ))}
       </div>
-    </div>
+  </>
   );
 };
 
