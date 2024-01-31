@@ -5,10 +5,10 @@ import styles from '../../styles/AllShopPage.module.css'
 const Card = ({ data }) => {
   const { id, title, image, price } = data
   const { addToCart, cartItems } = useContext(ShopContext)
-  const cartItemAmmout = cartItems.filter(item => item.id === id).length;
+  const cartItemAmmout = cartItems[id] ? cartItems[id].quantity : 0;
   
   const handleAddtoCart = () => {
-    addToCart(data)
+    addToCart(data);
   }
  
   return (
@@ -18,7 +18,7 @@ const Card = ({ data }) => {
       <h3>{title}</h3>
       <p>£{price}</p>
       <div className={styles.btnContainer}>
-        <button onClick={() => handleAddtoCart([])}>
+        <button onClick={handleAddtoCart}>
           Add To Cart {cartItemAmmout > 0 && <p> ({cartItemAmmout})</p>}</button>
       </div>
     </div>

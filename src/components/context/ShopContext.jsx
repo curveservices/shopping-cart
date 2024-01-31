@@ -44,22 +44,39 @@ export const ShopContext = createContext(null);
 export const ShopContextProvider = (props) => {
   const productAPI = useAPI("https://fakestoreapi.com/products/");
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState({});
 
-  // const addToCart = (itemId) => {
-  //   setCartItems((prev) => ({...prev,
-  //     [itemId]: (prev[itemId] || 0) + 1,
-  //   }));
-  // };
   const addToCart = (product) => {
-  setCartItems((prev) => [...prev, product]);
+    setCartItems((prev) => {
+      return { ...prev, [product.id]: { ...product, quantity: (prev[product.id]?.quantity || 0) + 1 } };
+    });
   };
 
-  const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}));
+  const removeFromCart = (productId) => {
+    setCartItems((prev) => {
+      const updatedCart = { ...prev };
+      if (updatedCart[productId]) {
+        if (updatedCart[productId].quantity > 1) {
+          updatedCart[productId].quantity -= 1;
+        } else {
+          delete updatedCart[productId];
+        }
+      }
+      return updatedCart;
+    });
   };
-  
-  const contextValue = { cartItems, addToCart, removeFromCart, productAPI };
+
+  const updateCartItemCount = (newAmount, productId) => {
+    setCartItems((prev) => {
+      const updatedCart = { ...prev };
+      if (updatedCart[productId]) {
+        updatedCart[productId].quantity = newAmount;
+      }
+      return updatedCart;
+    });
+  };
+
+  const contextValue = { cartItems, addToCart, removeFromCart, productAPI, updateCartItemCount };
 
   return (
     <ShopContext.Provider value={contextValue}>

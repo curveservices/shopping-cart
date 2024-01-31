@@ -7,7 +7,7 @@ import CartItem from "./CartItem";
 
 const CartPage = () => {
   const { cartItems } = useContext(ShopContext);
-  const uniqueItems = Array.from(new Set(cartItems.map((item) => item.id)));
+  const cartItemsArray = Object.values(cartItems)
   
   return (
     <>
@@ -15,8 +15,8 @@ const CartPage = () => {
       <h2>YOUR CART</h2>
     </div>
     <div className={styles.cardContainer}>
-    {uniqueItems.map((itemId) => (
-      <CartItem key={itemId} itemId={itemId}/>
+    {cartItemsArray.map((item) => (
+      <CartItem key={item.id} itemId={item.id}/>
     ))}
       </div>
     <div className={styles.checkout}>
