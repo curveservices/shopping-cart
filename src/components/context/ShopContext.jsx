@@ -38,25 +38,27 @@ export default function useAPI(url) {
   return { data, loading, loaded, error };
 }
 
+//Context
 export const ShopContext = createContext(null);
-
-
 
 export const ShopContextProvider = (props) => {
   const productAPI = useAPI("https://fakestoreapi.com/products/");
 
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (itemId) => {
-    setCartItems((prev) => ({
-      ...prev,
-      [itemId]: (prev[itemId] || 0) + 1,
-    }));
+  // const addToCart = (itemId) => {
+  //   setCartItems((prev) => ({...prev,
+  //     [itemId]: (prev[itemId] || 0) + 1,
+  //   }));
+  // };
+  const addToCart = (product) => {
+  setCartItems((prev) => [...prev, product]);
   };
-  
+
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}));
   };
+  
   const contextValue = { cartItems, addToCart, removeFromCart, productAPI };
 
   return (

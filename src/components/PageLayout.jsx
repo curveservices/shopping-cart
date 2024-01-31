@@ -27,7 +27,7 @@ const PageLayout = ({ apiEndpoint}) => {
       <div className={styles.cardContainer}>
         {currentAPI.data &&
           currentAPI.data.map((product) => (
-              <Card key={product.id}data={product}/>
+              <Card key={product.id} data={product}/>
           ))}
       </div>
     </>

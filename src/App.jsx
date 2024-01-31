@@ -33,7 +33,7 @@ const router = createBrowserRouter(
         <Route path="electronics" element={<Electronics />} />
       </Route>
       
-      {/* <Route path="cart" element={<CartPage />} /> */}
+      <Route path="cart" element={<CartPage />} />
 
       <Route path="*" element={<NotFound />} />
     </Route>
