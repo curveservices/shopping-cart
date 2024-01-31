@@ -1,14 +1,14 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Breadcrumbs from "../common/Breadcrumbs";
-import { FaShoppingCart } from "react-icons/fa";
-import style from "../styles/RootLayout.module.css";
+import Breadcrumbs from "./Breadcrumbs"
+import { FaShoppingCart} from "react-icons/fa";
+import styles from "./styles/NavBar.module.css";
 
 
 const cartItemsCount = 0;
 
-const RootLayout = () => {
+const NavBar = () => {
   return (
-    <div className={style.header}>
+    <div className={styles.header}>
       <header>
         <nav>
           <h1>Fake Shopper</h1>
@@ -21,11 +21,10 @@ const RootLayout = () => {
         </nav>
         <Breadcrumbs />
       </header>
-      <main>
-        <Outlet />
-      </main>
+       <Outlet />
+     
     </div>
   );
 };
 
-export default RootLayout;
+export default NavBar;

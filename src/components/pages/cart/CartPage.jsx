@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
-import styles from "../styles/AllShopPage.module.css"
+import styles from "../../styles/AllShopPage.module.css"
+import { FaTrash } from "react-icons/fa";
+import { useContext } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 const CartPage = () => {
-  const { cart } = useCart();
+  const { cartItems } = useContext(ShopContext)
 
     return (
       <>
@@ -11,12 +13,12 @@ const CartPage = () => {
         <h2>YOUR CART</h2>
       </div>
       <div  className={styles.cardContainer}>
-        {cart && cart.map((item) => (
+        {cartItems &&
           <div className={styles.card}>
-            <img src={item.image} alt={item.title} className={styles.img} />
-            <p><strong>{item.title}</strong></p>
-            <p><strong>{item.decription}</strong></p>
-            <p><strong>£{item.price}</strong></p>
+            <img src={cartItems.image} alt={cartItems.title} className={styles.img} />
+            <p>{cartItems.title}</p>
+            <p>{cartItems.decription}</p>
+            <p>£{cartItems.price}</p>
           
             <div className={styles.btnContainer}>
               <button className={styles.minus}>-</button>
@@ -25,7 +27,7 @@ const CartPage = () => {
             </div>
             <button><i className="fa-solid fa-trash"></i> Remove</button>
           </div>
-        ))}
+      }
         
     </div>
     <div className={styles.checkout}>

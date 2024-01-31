@@ -9,7 +9,8 @@
     display: flex;
     flex-flow: column;
     padding: 2em;
-    border: 2px dotted #2f2f2255;
+    border: 2px solid #2f2f2255;
+    border-radius: 4px;
     align-items: center;
     justify-content:space-evenly;
     text-align: center;

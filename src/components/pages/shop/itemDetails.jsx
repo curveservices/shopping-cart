@@ -1,18 +1,15 @@
-import {  useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useAPI from "../../../services/ShopAPI";
-import Card from "../../common/Card";
+import Card from "./Card";
 import styles from '../../styles/AllShopPage.module.css'
 import { MoonLoader } from "react-spinners";
+import { ShopContext } from "../../context/ShopContext";
+import { useContext } from "react";
 
 export default function ItemsDetails() {
   const { id } = useParams()
   const { data, loading, error}  = useAPI("https://fakestoreapi.com/products/" + id)
-
-  const addToCart = (item) => {
-    console.log('add to cart', item)
-    setCart((prevCart) => [...prevCart, item])
-    
-  };
+  const { addToCart, cartItems } = useContext(ShopContext)
 
   return (
     <>
@@ -52,6 +49,12 @@ export default function ItemsDetails() {
   </>
   )
 }
+ 
+
+
+
+
+ 
  
 
 

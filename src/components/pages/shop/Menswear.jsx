@@ -1,6 +1,6 @@
 import useAPI from "../../../services/ShopAPI";
 import { useState } from "react";
-import PageLayout from "../../common/PageLayout";
+import PageLayout from "../../PageLayout";
 
 const Menswear = () => {
   const { data, loading, error } = useAPI("https://fakestoreapi.com/products/category/men's clothing");

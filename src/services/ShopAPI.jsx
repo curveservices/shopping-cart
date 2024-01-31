@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const productItemLoader = () => {
-  const  { data,loading, error } = useAPI("https://fakestoreapi.com/products", {mode:'cors'})
+  const  { data, loading, error } = useAPI("https://fakestoreapi.com/products", {mode:'cors'})
   return (data, loading, error)
 }
 
@@ -35,8 +35,9 @@ export default function useAPI(url) {
           setData(null);
           setLoading(false);
         }
-      });
 
+      });
+      
     return () => abortController.abort(); // Cleanup on component unmount
 
   }, [url]);
