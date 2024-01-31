@@ -42,17 +42,13 @@ p {
     text-align: center;
     font-weight: bold;
 }
-button {
-    width: 120px;
-    height: auto;
-}
 .btnContainer {
     display: flex;
-    width: 100px;
+    width: 150px;
     padding: 0 16px;
     gap: 8px;
 }
-.btnContainer input {
+/* .btnContainer input {
     width: 20px;
     height: auto;
 }
@@ -61,7 +57,7 @@ button {
 }
 .minus {
     background: #9c3333;
-}
+} */
 .checkout {
     display: flex;
     flex-direction: column;

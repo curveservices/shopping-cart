@@ -15,7 +15,7 @@ const Card = (props) => {
       <p>£{price}</p>
       <div className={styles.btnContainer}>
         <button onClick={() => addToCart(id)}>
-          Add To Cart {cartItemAmmout > 0 && <>({cartItemAmmout})</>}</button>
+          Add To Cart {cartItemAmmout > 0 && <> ({cartItemAmmout})</>}</button>
       </div>
     </div>
     </>
