@@ -42,22 +42,27 @@ p {
     text-align: center;
     font-weight: bold;
 }
+
 .btnContainer {
     display: flex;
+    justify-content: center;
     width: 150px;
     padding: 0 16px;
-    gap: 8px;
+    gap: 2px;
 }
-/* .btnContainer input {
-    width: 20px;
+.btnContainer input {
+    width: 50px;
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
     height: auto;
 }
-.plus {
-    background: rgb(15, 72, 15);
+.plusMinus {
+    width: 30px;
+    height: auto;
+    border-radius: 5px;
+    background: rgba(120, 120, 120, 0.6)
 }
-.minus {
-    background: #9c3333;
-} */
 .checkout {
     display: flex;
     flex-direction: column;
