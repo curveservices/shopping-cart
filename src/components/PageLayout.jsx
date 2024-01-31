@@ -1,37 +1,33 @@
-import { Link, useParams } from "react-router-dom";
 import { MoonLoader } from "react-spinners";
 import styles from './styles/AllShopPage.module.css'
 import Card from "./pages/shop/Card";
-import { useContext } from "react";
-import { ShopContext } from "./context/ShopContext";
+import useAPI from "./context/ShopContext";
 
-const PageLayout = ({ data, loading, error }) => {
-    const { id } = useParams()
-    const { addToCart, cartItems } = useContext(ShopContext)
+
+const PageLayout = ({ apiEndpoint}) => {
+    const currentAPI = useAPI(apiEndpoint)
     return (
     <>
-      {loading &&
+      {currentAPI.loading &&
       <div className={styles.spinner}>
         <MoonLoader
           color="black"
-          loading={loading}
+          loading={currentAPI.loading}
           size={100}
           aria-label="Loading Spinner"
           data-testid="loader"
         />
         </div>
       }
-      {error && (
+      {currentAPI.error && (
         <div>
-          {`There was a problem fetching the item data = ${error}`}
+          {`There was a problem fetching the item data = ${currentAPI.error}`}
         </div>
       )}
       <div className={styles.cardContainer}>
-        {data &&
-          data.map((product) => (
-              <Card data={product}/>
-            
-      
+        {currentAPI.data &&
+          currentAPI.data.map((product) => (
+              <Card key={product.id}data={product}/>
           ))}
       </div>
     </>

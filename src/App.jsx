@@ -18,9 +18,6 @@ import Womenswear from "./components/pages/shop/Womenswear";
 import Jewelery from "./components/pages/shop/Jewelery";
 import Electronics from "./components/pages/shop/Electronics";
 import CartPage from "./components/pages/cart/CartPage";
-import ItemDetails from "./components/pages/shop/itemDetails";
-import { ShopContextProvider } from "./components/context/ShopContext";
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +27,6 @@ const router = createBrowserRouter(
     
       <Route path="shop" element={<ShopLayout />}>
         <Route index element={<Shop />} />
-        {/* <Route path=":id" element={<ItemDetails/>}/> */}
         <Route path="menswear" element={<Menswear />} />
         <Route path="womenswear" element={<Womenswear />} />
         <Route path="jewelery" element={<Jewelery />} />
