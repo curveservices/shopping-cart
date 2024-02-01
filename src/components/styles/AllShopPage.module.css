@@ -1,7 +1,7 @@
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) ;
-    grid-gap: 1em;
+    grid-gap: 4rem;
     margin: 1em;
 }
 
@@ -16,8 +16,7 @@
     text-align: center;
     gap: 0.5em;
     margin-top: 1em;
-    height: 400px;
-    
+    height: auto;    
 }
 .header {
     display: flex;
@@ -32,12 +31,20 @@
 
 .img {
     width: 150px;
-    height: 150px;
+    height: auto;
 }
 h2 {
     text-transform: uppercase;
 }
-
+.productTitle {
+    
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center; */
+}
 p { 
     text-align: center;
     font-weight: bold;

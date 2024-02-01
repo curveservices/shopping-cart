@@ -3,7 +3,7 @@ import { ShopContext } from '../../context/ShopContext'
 import styles from '../../styles/AllShopPage.module.css'
 
 const Card = ({ data }) => {
-  const { id, title, image, price } = data
+  const { id, title, image, price, category } = data
   const { addToCart, cartItems } = useContext(ShopContext)
   const cartItemAmmout = cartItems[id] ? cartItems[id].quantity : 0;
   
@@ -15,7 +15,10 @@ const Card = ({ data }) => {
     <>
     <div className={styles.card}>
       <img src={image} alt={title} className={styles.img}/>
+      <div className={styles.productTitle}>
       <h3>{title}</h3>
+      </div>
+      
       <p>£{price}</p>
       <div className={styles.btnContainer}>
         <button onClick={handleAddtoCart}>
