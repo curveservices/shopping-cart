@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { ShopContext } from '../../context/ShopContext'
+import { ShopContext } from "../../context/ShopContext";
 import styles from '../../styles/AllShopPage.module.css'
 
 const Card = ({ data }) => {
-  const { id, title, image, price, category } = data
+  const { id, title, image, price} = data
   const { addToCart, cartItems } = useContext(ShopContext)
   const cartItemAmmout = cartItems[id] ? cartItems[id].quantity : 0;
   
@@ -20,7 +20,7 @@ const Card = ({ data }) => {
       <p>£{price}</p>
       <div className={styles.btnContainer}>
         <button onClick={handleAddtoCart}>
-          Add To Cart {cartItemAmmout > 0 && <p> ({cartItemAmmout})</p>}</button>
+          Add To Cart {cartItemAmmout > 0 && <> ({cartItemAmmout})</>}</button>
       </div>
     </div>
   );

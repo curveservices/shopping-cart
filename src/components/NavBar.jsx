@@ -22,7 +22,6 @@ const NavBar = () => {
         <Breadcrumbs />
       </header>
        <Outlet />
-     
     </div>
   );
 };

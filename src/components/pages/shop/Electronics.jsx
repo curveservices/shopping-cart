@@ -1,4 +1,3 @@
-import { dataTagSymbol } from "@tanstack/react-query";
 import PageLayout from "../../PageLayout";
 
 const Electronics = () => { 

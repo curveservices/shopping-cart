@@ -6,8 +6,10 @@ import CartItem from "./CartItem";
 
 
 const CartPage = () => {
-  const { cartItems } = useContext(ShopContext);
-  const cartItemsArray = Object.values(cartItems)
+  const { cartItems , getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount  = getTotalCartAmount()
+  const cartItemsArray = Object.values(cartItems);
+  
   
   return (
     <>
@@ -15,15 +17,21 @@ const CartPage = () => {
       <h2>YOUR CART</h2>
     </div>
     <div className={styles.cardContainer}>
-    {cartItemsArray.map((item) => (
-      <CartItem key={item.id} itemId={item.id}/>
-    ))}
-      </div>
-    <div className={styles.checkout}>
-    <p>Total £</p>
-    <button ><Link to='/'>Check Out</Link></button>
-    <Link to='/shop'>Keep Shopping</Link>
+      {cartItemsArray.map((item) => (
+        <CartItem key={item.id} itemId={item.id}/>
+      ))}
     </div>
+    {totalAmount > 0 ? (
+      <div className={styles.checkout}>
+      <p>Sub Total £{totalAmount}</p>
+      <div className={styles.btnContainer}>
+        <button><Link to='/shop'>Keep Shopping</Link></button>
+        <button ><Link to='/'>Check Out</Link></button>
+      </div>
+    </div>
+    ) : (
+      <h1>Your Cart is Empty</h1>
+    )}
   
   </>
   );
