@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "../styles/NotFound.module.css";
-import ripped from "../assets/404.webp";
+import ripped from "../components/assets/404.webp";
 
 const NotFound = () => {
   return (

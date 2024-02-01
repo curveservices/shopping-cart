@@ -10,14 +10,14 @@ import NavBar from "./components/NavBar";
 import ShopLayout from "./components/ShopLayout";
 
 //Pages
-import Home from "./components/pages/Home";
-import Shop from "./components/pages/shop/Shop";
-import NotFound from "./components/pages/NotFound";
-import Menswear from "./components/pages/shop/Menswear";
-import Womenswear from "./components/pages/shop/Womenswear";
-import Jewelery from "./components/pages/shop/Jewelery";
-import Electronics from "./components/pages/shop/Electronics";
-import CartPage from "./components/pages/cart/CartPage";
+import Home from "./pages/Home";
+import Shop from "./pages/shop/Shop";
+import NotFound from "./pages/NotFound";
+import Menswear from "./pages/shop/Menswear";
+import Womenswear from "./pages/shop/Womenswear";
+import Jewelery from "./pages/shop/Jewelery";
+import Electronics from "./pages/shop/Electronics";
+import CartPage from "./pages/cart/CartPage"
 
 const router = createBrowserRouter(
   createRoutesFromElements(

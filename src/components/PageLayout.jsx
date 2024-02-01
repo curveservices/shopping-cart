@@ -1,7 +1,7 @@
 import { MoonLoader } from "react-spinners";
-import styles from './styles/AllShopPage.module.css'
-import Card from "./pages/shop/Card";
-import useAPI from "./context/ShopContext";
+import styles from "../styles/AllShopPage.module.css";
+import Card from "./Card";
+import useAPI from "../context/ShopContext";
 
 
 const PageLayout = ({ apiEndpoint}) => {

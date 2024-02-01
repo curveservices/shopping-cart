@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import styles from "../../styles/AllShopPage.module.css";
 import { useContext } from "react";
 import { ShopContext } from "../../context/ShopContext";
 import CartItem from "./CartItem";
+import styles from "../../styles/AllShopPage.module.css";
 
 
 const CartPage = () => {

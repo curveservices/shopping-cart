@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ShopContext } from "../../context/ShopContext";
-import styles from '../../styles/AllShopPage.module.css'
+import { ShopContext } from "../context/ShopContext";
+import styles from "../styles/AllShopPage.module.css";
 
 const Card = ({ data }) => {
   const { id, title, image, price} = data
