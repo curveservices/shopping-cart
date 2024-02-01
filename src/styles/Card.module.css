@@ -2,21 +2,21 @@
     display: flex;
     flex-flow: column;
     padding: 0em 3em 2em 3em;
-    border-bottom: 4px dashed #aba6a6;
+    border-bottom: 1px solid #aba6a6de;
     align-items: center;
     justify-content:space-evenly;
     text-align: center;
-    gap: 0.5em;
+    gap: 1em;
     height: auto;    
 }
 
 .imgContainer {
-    border: 7px solid #a8a6a6;
-    padding: 1rem 2rem 2rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    padding: 1rem 2rem 2rem 2rem;
 
     width: 14rem;
     height: 17rem; 
