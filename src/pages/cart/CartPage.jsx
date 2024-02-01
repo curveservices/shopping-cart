@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { ShopContext } from "../../context/ShopContext";
-import CartItem from "./CartItem";
+import { ShopContext } from "../../utils/ShopContext";
+import CartItem from "../../components/CartItem";
 import styles from "../../styles/AllShopPage.module.css";
 
 

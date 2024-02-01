@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { ShopContext } from '../../context/ShopContext';
-import styles from "../../styles/AllShopPage.module.css";
+import { ShopContext } from '../utils/ShopContext';
+import styles from "../styles/Card.module.css";
 
 const CartItem = ({ itemId }) => {
     const { cartItems, addToCart, removeFromCart , updateCartItemCount } = useContext(ShopContext);

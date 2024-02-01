@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "./Breadcrumbs"
 import { FaShoppingCart} from "react-icons/fa";
 import { useContext } from "react";
-import { ShopContext } from "../context/ShopContext";
+import { ShopContext } from "../utils/ShopContext";
 import styles from "../styles/NavBar.module.css";
 
 const NavBar = () => {

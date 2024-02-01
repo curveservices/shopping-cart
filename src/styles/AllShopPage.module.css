@@ -6,17 +6,7 @@
     margin: 0em;
 }
 
-.card {
-    display: flex;
-    flex-flow: column;
-    padding: 0em 3em 2em 3em;
-    border-bottom: 4px dashed #aba6a6;
-    align-items: center;
-    justify-content:space-evenly;
-    text-align: center;
-    gap: 0.5em;
-    height: auto;    
-}
+
 .header {
     display: flex;
     justify-content: center;
@@ -28,67 +18,14 @@
     gap: 5em;
 }
 
-.imgContainer {
-    border: 7px solid #a8a6a6;
-    padding: 1rem 2rem 2rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-
-    width: 14rem;
-    height: 17rem; 
-    overflow: hidden;
-}
-.img {
-    max-width: 100%;
-    height: inherit;
-}
-
 h2 {
     text-transform: uppercase;
 }
-.productTitle {
-    width: 16rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
-}
+
 p { 
     text-align: center;
     font-weight: bold;
 }
-
-.btnContainer {
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    padding: 0 16px;
-    gap: 2px;
-}
-.btnContainer input {
-    width: 50px;
-    padding: 2px;
-    border-radius: 5px;
-    text-align: center;
-    height: auto;
-}
-.plusMinus {
-    width: 30px;
-    height: auto;
-    border-radius: 5px;
-    background: rgba(120, 120, 120, 0.6)
-}
-.checkout {
-    display: flex;
-    flex-direction: column;
-    font-weight: 900;
-    float: right;
-}
-
 .spinner {
     position: fixed;
     top: 40%;
