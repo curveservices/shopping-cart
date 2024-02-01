@@ -24,6 +24,7 @@ const PageLayout = ({ apiEndpoint}) => {
           {`There was a problem fetching the item data = ${currentAPI.error}`}
         </div>
       )}
+     
       <div className={styles.cardContainer}>
         {currentAPI.data &&
           currentAPI.data.map((product) => (

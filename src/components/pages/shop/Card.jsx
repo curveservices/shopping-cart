@@ -12,20 +12,17 @@ const Card = ({ data }) => {
   }
  
   return (
-    <>
     <div className={styles.card}>
+      <div className={styles.imgContainer}>
       <img src={image} alt={title} className={styles.img}/>
-      <div className={styles.productTitle}>
-      <h3>{title}</h3>
       </div>
-      
+      <h3 className={styles.productTitle}>{title}</h3>
       <p>£{price}</p>
       <div className={styles.btnContainer}>
         <button onClick={handleAddtoCart}>
           Add To Cart {cartItemAmmout > 0 && <p> ({cartItemAmmout})</p>}</button>
       </div>
     </div>
-    </>
   );
 };
  
