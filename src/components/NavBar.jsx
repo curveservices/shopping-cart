@@ -2,11 +2,16 @@ import { NavLink, Outlet } from "react-router-dom";
 import Breadcrumbs from "./Breadcrumbs"
 import { FaShoppingCart} from "react-icons/fa";
 import styles from "./styles/NavBar.module.css";
-
-
-const cartItemsCount = 0;
+import { useContext } from "react";
+import { ShopContext } from "./context/ShopContext";
 
 const NavBar = () => {
+const { cartItems } = useContext(ShopContext);
+const cartItemsCount = Object.values(cartItems).reduce(
+  (totalCount, item) => totalCount + item.quantity,
+  0
+)
+
   return (
     <div className={styles.header}>
       <header>
