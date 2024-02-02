@@ -10,7 +10,7 @@ const NotFound = () => {
         <div className={style.container}>
           <div className={style.top}>
             Page Not Found
-              <Link to="/">Back Home</Link>
+            <Link to="/">Back Home</Link>
           </div>
         </div>
       </div>

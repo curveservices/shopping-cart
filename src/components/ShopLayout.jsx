@@ -2,7 +2,6 @@ import { NavLink, Outlet } from "react-router-dom";
 import styles from "../styles/ShopLayout.module.css";
 
 const ShopLayout = () => {
-
   return (
     <div className={styles.layout}>
       <nav className={styles.sidebar}>

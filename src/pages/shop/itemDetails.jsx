@@ -29,35 +29,22 @@
 //         {`There was a problem fetching the item data = ${error}`}
 //       </div>
 //     )}
-    
-      
+
 //       {data &&
 //       <>
 //          <div >
 //           <h2 className={styles.header}>{data.title}</h2>
-//             <Card 
+//             <Card
 //             image={data.image}
-//             title={data.title} 
-//             description={data.description} 
+//             title={data.title}
+//             description={data.description}
 //             price={data.price}
 //             addToCart={addToCart}
 //             />
 //         </div>
 //       </>
 //       }
-    
+
 //   </>
 //   )
 // }
- 
-
-
-
-
- 
- 
-
-
-
-
- 

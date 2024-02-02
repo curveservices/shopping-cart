@@ -1,8 +1,8 @@
 import PageLayout from "../../components/PageLayout";
 
-const Electronics = () => { 
+const Electronics = () => {
   return (
-    <PageLayout apiEndpoint="https://fakestoreapi.com/products/category/electronics"/>
+    <PageLayout apiEndpoint="https://fakestoreapi.com/products/category/electronics" />
   );
 };
 

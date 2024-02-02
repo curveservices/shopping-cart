@@ -3,11 +3,12 @@
 ## Live Demo 👉 [Fake Shopper](https://immutable-fakeshop.netlify.app/)
 
 ## PC View 👇
+
 <img width="1207" alt="Screenshot 2024-02-02 at 09 12 03" src="https://github.com/curveservices/shopping-cart/assets/101556296/e256aef2-8bc4-4589-8d84-eb5eb12c89fc">
 
 ## Overview
 
-[Project](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart#project-solution) has been set as part of [The Odin Project](https://www.theodinproject.com/)
+[Project: Shopping Cart](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart#project-solution) has been set as part of [The Odin Project](https://www.theodinproject.com/) Full stack Javascript-React curriculum. This has been set to practice React router state and effects, React testing and React styling.
 
 ## Assets
 

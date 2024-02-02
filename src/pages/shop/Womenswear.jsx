@@ -2,7 +2,7 @@ import PageLayout from "../../components/PageLayout";
 
 const Womenswear = () => {
   return (
-    <PageLayout apiEndpoint="https://fakestoreapi.com/products/category/women's clothing"/>
+    <PageLayout apiEndpoint="https://fakestoreapi.com/products/category/women's clothing" />
   );
 };
 

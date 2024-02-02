@@ -1,36 +1,36 @@
 .card {
-    display: flex;
-    flex-flow: column;
-    padding: 0em 3em 2em 3em;
-    border-bottom: 1px solid #aba6a6de;
-    align-items: center;
-    justify-content:space-evenly;
-    text-align: center;
-    gap: 1em;
-    height: auto;    
+  display: flex;
+  flex-flow: column;
+  padding: 0em 3em 2em 3em;
+  border-bottom: 1px solid #aba6a6de;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 1em;
+  height: auto;
 }
 
 .imgContainer {
-    display: flex;
-    justify-content:center;
-    background-color: #fff;
-    box-shadow: 0 20px 30px rgba(0,0,0,.1);
-    padding: 0rem 2rem 2rem 2rem;
-    width: 14rem;
-    height: 17rem; 
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding: 0rem 2rem 2rem 2rem;
+  width: 14rem;
+  height: 17rem;
+  overflow: hidden;
 }
 .img {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 .productTitle {
-    width: 16rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: center;
+  width: 16rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
 }

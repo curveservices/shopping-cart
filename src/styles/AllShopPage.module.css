@@ -1,43 +1,43 @@
 .cardContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)) ;
-    column-gap: 1rem;
-    row-gap: 2rem;
-    margin: 0em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 2rem;
+  margin: 0em;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    margin: 1em;
-    gap: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin: 1em;
+  gap: 5em;
 }
 
 h2 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-p { 
-    text-align: center;
-    font-weight: bold;
+p {
+  text-align: center;
+  font-weight: bold;
 }
 .spinner {
-    position: fixed;
-    top: 40%;
-    left: 35%;
+  position: fixed;
+  top: 40%;
+  left: 35%;
 }
 .itemdetails {
-    align-self: center;
-    margin: 1em;
-    width: 700px;
-    max-height: 1000px;
+  align-self: center;
+  margin: 1em;
+  width: 700px;
+  max-height: 1000px;
 }
 @media only screen and (min-width: 670px) {
-    .spinner {
-        left: 50%;
-    }
+  .spinner {
+    left: 50%;
+  }
 }

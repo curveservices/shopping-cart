@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from "react";
 
 //useAPI
 export default function useAPI(url) {
@@ -31,9 +31,8 @@ export default function useAPI(url) {
           setLoading(false);
         }
       });
-      
-    return () => abortController.abort(); // Cleanup on component unmount
 
+    return () => abortController.abort(); // Cleanup on component unmount
   }, [url]);
 
   return { data, loading, loaded, error };
@@ -60,7 +59,13 @@ export const ShopContextProvider = (props) => {
 
   const addToCart = (product) => {
     setCartItems((prev) => {
-      return { ...prev, [product.id]: { ...product, quantity: (prev[product.id]?.quantity || 0) + 1 } };
+      return {
+        ...prev,
+        [product.id]: {
+          ...product,
+          quantity: (prev[product.id]?.quantity || 0) + 1,
+        },
+      };
     });
   };
 
@@ -88,20 +93,20 @@ export const ShopContextProvider = (props) => {
     });
   };
 
-  const contextValue = { 
-    cartItems, 
-    addToCart, 
-    removeFromCart, 
-    productAPI, 
+  const contextValue = {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    productAPI,
     updateCartItemCount,
     getTotalCartAmount,
-   };
+  };
 
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}
     </ShopContext.Provider>
-    );
+  );
 };
 
 // export const useCart = () => {
