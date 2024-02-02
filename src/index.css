@@ -23,7 +23,6 @@ a {
   display: inline-block;
   position: relative;
   text-align: center;
-  padding: 6px;
   color: #2f2f2f;
 }
 a:after {
