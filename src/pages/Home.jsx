@@ -11,11 +11,11 @@ const Home = () => {
     <div className={styles.container}> 
         <Link to={"/shop/womenswear"} className={styles.box}>
           <img src={women} alt="women.s clothing" />
-          <span>Women's Clothing</span>
+          <span>Women's Wear</span>
         </Link>
       <Link to={"/shop/menswear"} className={styles.box}>
         <img src={men} alt="men's clothing" />
-        <span>Men's Clothing</span>
+        <span>Men's Wear</span>
       </Link>
       <Link to={"shop/jewelery"} className={styles.box}>
         <img src={jewelery} alt="jewelery" />

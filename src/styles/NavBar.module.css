@@ -1,16 +1,31 @@
 /* navbar */
 header nav {
   display: flex;
-  gap: 1.25em;
+  gap: 0.3em;
   justify-content: end;
-  margin: 0 auto;
-  padding: 16px;
   border-bottom: 2px solid #78787899;
+  margin: 0;
+  padding: 12px;
+  align-items: center;
 }
+
 header nav h1 {
+  font-size: 16px;
   margin-right: auto;
+  text-transform: uppercase;
 }
-header nav a {
-  text-decoration: none;
-  padding: 6px;
+
+@media only screen and (min-width: 670px)  {
+
+  header nav {
+    gap: 1.25em;
+    padding: 16px;
+  }
+  header nav h1 {
+    font-size: 1.5em;
+  }
+  header nav a {
+    text-decoration: none;
+    padding: 6px;
+  }
 }

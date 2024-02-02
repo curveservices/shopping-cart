@@ -21,7 +21,7 @@ import CartPage from "./pages/cart/CartPage"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    
+  
     <Route element={<NavBar />}>
       <Route path="/" element={<Home />} />
     

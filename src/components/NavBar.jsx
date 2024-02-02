@@ -8,20 +8,24 @@ import styles from "../styles/NavBar.module.css";
 const NavBar = () => {
 const { cartItems } = useContext(ShopContext);
 const cartItemsCount = Object.values(cartItems).reduce(
-  (totalCount, item) => totalCount + item.quantity,
-  0
-)
+  (totalCount, item) => totalCount + item.quantity, 0)
+
+const responsiveSideBar = () => {
+  if (window.innerWidth <= 670) {
+    className.remove(styles.sidebarShow);
+    className.add(styles.sidbarHide)
+  }
+}
 
   return (
     <div className={styles.header}>
       <header>
-        <nav>
+        <nav className={styles.sidebarShow}>
           <h1>Fake Shopper</h1>
           <NavLink to="/">Home</NavLink>
           <NavLink to="shop">Shop</NavLink>
           <NavLink to="cart">
-            <FaShoppingCart />
-            ({ cartItemsCount })
+            <FaShoppingCart /> ({ cartItemsCount })
           </NavLink>
         </nav>
         <Breadcrumbs />

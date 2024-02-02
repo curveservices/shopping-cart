@@ -1,14 +1,13 @@
-# 🚫 UNDER CONSTRUCTION 🚫
-
 # Project: Shopping Cart
 
-## Live Demo 👉
+## Live Demo 👉 [Fake Shopper](https://immutable-fakeshop.netlify.app/)
 
 ## PC View 👇
+<img width="1207" alt="Screenshot 2024-02-02 at 09 12 03" src="https://github.com/curveservices/shopping-cart/assets/101556296/e256aef2-8bc4-4589-8d84-eb5eb12c89fc">
 
 ## Overview
 
-[Project]() has been set as part of [The Odin Project](https://www.theodinproject.com/)
+[Project](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart#project-solution) has been set as part of [The Odin Project](https://www.theodinproject.com/)
 
 ## Assets
 
@@ -45,6 +44,6 @@
 <a href="https://jestjs.io/">
     <img width="100" alt="jest" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" /></a>
 
-**_<a href="https://twitter.com/Crypto_Rozla"> Rozla-Dev </a> 00-00-2023_**
+**_<a href="https://twitter.com/Crypto_Rozla"> Rozla-Dev </a> 01-02-2024_**
 
 [Back to top 👆](#project:shopping-cart)

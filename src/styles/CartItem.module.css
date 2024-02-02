@@ -19,8 +19,9 @@
 .cartImage  {
     border: 2px solid #a8a6a6;
     padding: 1rem 2em;
+    margin: 1em;
     width: 50px;
-    height: inherit;
+    height: auto;
 }
 
 .productTitle {
