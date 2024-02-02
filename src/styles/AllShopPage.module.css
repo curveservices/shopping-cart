@@ -28,7 +28,7 @@ p {
 .spinner {
     position: fixed;
     top: 40%;
-    left: 50%;
+    left: 35%;
 }
 .itemdetails {
     align-self: center;
@@ -36,4 +36,8 @@ p {
     width: 700px;
     max-height: 1000px;
 }
-
+@media only screen and (min-width: 670px) {
+    .spinner {
+        left: 50%;
+    }
+}
